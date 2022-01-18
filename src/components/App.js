@@ -1,10 +1,20 @@
 import React from 'react';
 import SearchInput from './SearchInput';
 
-function App() {
-  return (
-    <div className='ui container' style={{marginTop: '30px'}}><SearchInput /></div>
-    
-    )}
+class App extends React.Component {
+  constructor(){
+    super(props)
+    this.onSearchSubmit = this.onSearchSubmit.bind(this)
+  }
+  onSearchSubmit(entry) {
+
+  }
+  render() {
+ 
+    return (
+      <div className='ui container' style={{marginTop: '30px'}}><SearchInput onSearchSubmit={this.onSearchSubmit} /></div>
+      
+      )}
+  }
 
     export default App;
